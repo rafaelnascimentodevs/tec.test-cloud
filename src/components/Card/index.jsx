@@ -1,24 +1,27 @@
 
 import { MdDelete } from "react-icons/md";
 import "../Card/styles.css";
+import { useNavigate } from "react-router-dom";
 
-export function Card() {
+export function Card({ entity }) {
+
+  const navigate = useNavigate();
   return (
     <article className="cardContainer">
       < header id="cardheader" >
-        <h2>Olá, esse projeto é sobre</h2>
+        <h2>{entity.empresa}</h2>
         <MdDelete size={28} color="#ed4337" />
       </header>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro
-        laudantium minus rem delectus vitae facilis? Tempora, quam. Ipsum
-        facilis sit tenetur architecto saepe quo. Dolores numquam nemo
-        voluptates magni. Ad.
-      </p>
+          <p>
+          {entity.email}
+          </p>
+          <p>
+          {entity.endereco}
+          </p>
 
       <div className="buttonsContainer">
-        <button>Ver publicação</button>
-        <button>Atualizar</button>
+        <button onClick={() =>navigate(`/oneEntity/${entity.id}`)}>Ver Empresa</button>
+        <button onClick={() => navigate(`/updateEntitys/${entity.id}`)}>Atualizar</button>
       </div>
     </article>
   );

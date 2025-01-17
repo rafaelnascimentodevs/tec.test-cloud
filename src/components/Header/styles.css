@@ -1,5 +1,7 @@
 header {
     width: 100%;
+    align-items: center;
     text-align: center;
+    justify-items: center;
     padding: 1rem 0;
 }

@@ -1,14 +1,41 @@
 import "./styles.css";
+import { data, useParams } from "react-router-dom"
+import { useEffect} from "react";
+import axios from "axios";
 
-export function OneEnt() {
+
+export function OneEnt({entity}) {
+
+  const { id } = useParams();
+  function handleOneEnt() {
+    axios.get(`/entitys/${id}`)
+    then(response => console.log(response.data.entitys))
+    console.log('Detalhes da empresa:', id)
+  }
+  
+  useEffect(() => {
+    axios.get(`/entitys/${id}`)
+    .then(response => console.log(response.data))
+  }
+  , [])
+
   return (
     <article className="onePostContainer">
-      <h2>Olá esse é o projeto</h2>
+      <h2>Detalhes da Empresa</h2>
       <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt
-        inventore officia laborum, similique at ab aut eveniet corporis
-        dignissimos vitae aperiam tempore repellendus ad vero nulla voluptatem
-        molestiae nostrum tenetur!
+        {entity.empresa}
+      </p>
+      <p>
+        {entity.cnpj}
+      </p>
+      <p>
+        {entity.email}
+      </p>
+      <p>
+        {entity.telefone}
+      </p>
+      <p>
+        {entity.endereco}
       </p>
     </article>
   );

@@ -7,11 +7,11 @@ import './styles.css';
 function App() {
   return (
     <>
-      <Header />
       <BrowserRouter>
-        <div className="app">
-          <Router />
-        </div>
+        <Header />
+          <div className="app">
+            <Router />
+          </div>
       </BrowserRouter>
     </>
   );

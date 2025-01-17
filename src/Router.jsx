@@ -9,9 +9,9 @@ export function Router() {
     return (
         <Routes>
             <Route path="/" element={<Feed />} />
-            <Route path="/createEntity" element={<CreateEnt />} />
-            <Route path="/oneEntity" element={<OneEnt />} />
-            <Route path="/updateEntity" element={<UpdateEnt />} />
+            <Route path="/createEntitys" element={<CreateEnt />} />
+            <Route path="/oneEntity/:id" element={<OneEnt />} />
+            <Route path="/updateEntitys/:id" element={<UpdateEnt />} />
         </Routes>
     );
 }
