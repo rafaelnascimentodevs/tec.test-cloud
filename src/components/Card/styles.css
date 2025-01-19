@@ -4,7 +4,7 @@ article+article {
 }
 
 .cardContainer {
-    background-color: #AFBED1;
+    background-color: #1098F7;
     max-width: 600px;
     min-width: 600px;
     padding: 2rem;
@@ -23,6 +23,7 @@ article+article {
 
 .cardContainer p {
     margin-top: 1rem;
+    color: #000;
 }
 
 .cardContainer .buttonsContainer {

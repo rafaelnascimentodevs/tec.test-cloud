@@ -4,6 +4,10 @@ import axios from "axios";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import { useParams } from "react-router-dom";
+
+
 
 const postSchema = (
   yup.object({
@@ -15,22 +19,28 @@ const postSchema = (
   })
 );
 
+
+
 export function Form({title, textButton, onAction}) {
 
+  const { id } = useParams();
   const navigate = useNavigate();
-
   const { register, handleSubmit, reset, formState:{errors} } = useForm({
     resolver: yupResolver(postSchema)
   });
-  function handleCreateEnt(data){
-    axios.post('/entitys', data)
-    console.log('Empresa criada com sucesso!')
-    navigate('/')
-    reset ();
+
+  async function getDataUpdat(){
+    const response = await axios.get(`/entitys/${id}`)
+    reset(response.data)
   }
+  
+  useEffect(() => {
+    getDataUpdat()
+  }, []);
+  
 
   return (
-    <form onSubmit={handleSubmit(onAction)}>
+    <form className="formContainer" onSubmit={handleSubmit(onAction)}>
       <h2>{title}</h2>
       <div className="field">
         <input placeholder="Empresa" {...register("empresa")} />

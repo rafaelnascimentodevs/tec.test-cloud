@@ -10,7 +10,7 @@ export function Router() {
         <Routes>
             <Route path="/" element={<Feed />} />
             <Route path="/createEntitys" element={<CreateEnt />} />
-            <Route path="/oneEntity/:id" element={<OneEnt />} />
+            <Route path="OneEntity/:id" element={<OneEnt />} />
             <Route path="/updateEntitys/:id" element={<UpdateEnt />} />
         </Routes>
     );

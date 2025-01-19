@@ -1,21 +1,17 @@
 import axios from "axios";
 import { Form } from "../../components/Form";
 import "./styles.css";
-import { useParams } from "react-router-dom";
-import { useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 
 export function UpdateEnt() {
 
+    const navigate = useNavigate();
     const { id } = useParams();
 
     function handleUpdateEnt(data) {
         axios.put(`/entitys/${id}`, data)
+        navigate('/')
         }
-    
-        useEffect(() => {
-        axios.get(`/entitys/${id}`)
-        .then(response => console.log(response.data))
-        }, [])
     
     return (
         <div>

@@ -7,11 +7,14 @@ export function CreateEnt() {
 
   const navigate = useNavigate();
 
+
   function handleCreateEnt(data){
     axios.post('/entitys', data)
+    console.log('Empresa criada com sucesso!')
     navigate('/')
-    
+    reset ();
   }
+
 
   return (
     <div>
