@@ -1,10 +1,96 @@
+/* Estilos principais para o OneEnt */
 .onePostContainer {
-    max-width: 700px;
-}
-
-.onePostContainer p {
-    margin-top: 1rem;
-}
-.p {
-    color: #000;
-}
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #333;
+  }
+  
+  .cardHeader {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .cardHeader h2 {
+    font-size: 2rem;
+    color: #1098F7;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  .entityDetails {
+    margin-top: 2rem;
+  }
+  
+  .detailRow {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+  
+  .detailRow strong {
+    color: #1098F7;
+    font-weight: bold;
+  }
+  
+  .buttonsContainer {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .button {
+    background-color: #1098F7;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #0077cc;
+  }
+  
+  @media (max-width: 768px) {
+    .onePostContainer {
+      padding: 1.5rem;
+    }
+  
+    .cardHeader h2 {
+      font-size: 1.7rem;
+    }
+  
+    .detailRow {
+      font-size: 1rem;
+    }
+  
+    .button {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1.1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .onePostContainer {
+      padding: 1rem;
+    }
+  
+    .cardHeader h2 {
+      font-size: 1.5rem;
+    }
+  
+    .detailRow {
+      font-size: 0.95rem;
+    }
+  
+    .button {
+      font-size: 1rem;
+    }
+  }
+  

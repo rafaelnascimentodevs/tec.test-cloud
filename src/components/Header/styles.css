@@ -1,7 +1,85 @@
-header {
-    width: 100%;
+
+.headerContainer {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    text-align: center;
-    justify-items: center;
-    padding: 1rem 0;
+    justify-content: center;
+    background-color: #1098F7;
+    color: #fff;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+    border-radius: 0.5rem;
+}
+
+
+.logoContainer {
+    margin-bottom: 1rem;
+}
+
+.logo {
+    width: 120px; 
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1); 
+}
+
+
+.navLinks {
+    display: flex;
+    justify-content: center;
+    gap: 2rem; 
+}
+
+.navButton {
+    background-color: #fff;
+    color: #1098F7;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.navButton:hover {
+    background-color: #f1f1f1;
+    transform: translateY(-2px); 
+}
+
+
+@media (max-width: 768px) {
+    .headerContainer {
+        padding: 1rem;
+    }
+
+    .logo {
+        width: 100px; 
+    }
+
+    .navLinks {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .navButton {
+        width: 100%; 
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 90px; 
+    }
+
+    .navButton {
+        font-size: 0.95rem; 
+    }
 }

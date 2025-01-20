@@ -6,7 +6,7 @@ import * as yup from "yup";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
-
+import InputMask from 'react-input-mask';
 
 
 const postSchema = (
@@ -43,22 +43,24 @@ export function Form({title, textButton, onAction}) {
     <form className="formContainer" onSubmit={handleSubmit(onAction)}>
       <h2>{title}</h2>
       <div className="field">
+
         <input placeholder="Empresa" {...register("empresa")} />
         {errors.empresa?.message}
       </div>
 
       <div className="field">
-        <input placeholder="CNPJ" {...register("cnpj")} />
+        <InputMask mask={"99.999.999/9999-99"} maskChar="" placeholder="CNPJ" type="text" autoComplete="off" {...register("cnpj")} />
+        <script src="./cnpj.js"></script>
         {errors.cnpj?.message}
       </div>
 
       <div className="field">
-        <input placeholder="E-mail" {...register("email")}/>
+        <input type="email" placeholder="E-mail" {...register("email")}/>
         {errors.email?.message}
       </div>
 
       <div className="field">
-        <input placeholder="Telefone" {...register("telefone")}/>
+        <InputMask mask="(99)99999-9999" maskChar="" placeholder="Telefone" {...register("telefone")}/>
         {errors.telefone?.message}
       </div>
 

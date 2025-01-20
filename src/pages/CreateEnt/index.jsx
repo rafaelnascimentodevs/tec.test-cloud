@@ -12,7 +12,6 @@ export function CreateEnt() {
     axios.post('/entitys', data)
     console.log('Empresa criada com sucesso!')
     navigate('/')
-    reset ();
   }
 
 

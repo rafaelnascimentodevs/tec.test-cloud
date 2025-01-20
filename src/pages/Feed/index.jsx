@@ -24,7 +24,7 @@ export function Feed() {
   return (
     <div className="feedContainer">
       {entitys.map((entity) => (
-        <Card key={entity.id} entity={entity} onDelEntity={handleDelEntity} />
+        <Card  key={entity.id} entity={entity} onDelEntity={handleDelEntity} />
       ))}
     </div>
   );

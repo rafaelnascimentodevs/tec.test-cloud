@@ -53,7 +53,7 @@ Para Windows 10+ , Linux e Mac : https://www.alura.com.br/artigos/como-instalar-
 
 - Para iniciar o servidor, rode o comando: `node server`.
 
-### Dependencias Utilizadas no Projeto
+### Dependencias/Components Utilizadas no Projeto
 
 Para saber os Detalhes da dependencia `react-hook-form` acesse o link  
 https://www.react-hook-form.com/get-started/
@@ -66,5 +66,9 @@ https://www.npmjs.com/package/react-router-dom
 
 Para saber os Detalhes da dependencia `yup` acesse o link 
 https://www.react-hook-form.com/get-started/#SchemaValidation
+
+
+Para saber os Detalhes do Component `react-input-mask` acesse o link 
+https://www.npmjs.com/package/react-input-mask
 
 

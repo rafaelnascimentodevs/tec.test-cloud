@@ -1,15 +1,15 @@
-import '../Header/styles.css'
-import Logo from '../../../public/logo.svg'
-import { useNavigate } from 'react-router-dom'
+import '../Header/styles.css';
+import { useNavigate } from 'react-router-dom';
 
 export function Header() {
-
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
     return (
-        <header>
-            <button onClick={() => navigate('/')}><img src={Logo} alt="logoh" /></button>
-            <button onClick={() => navigate('/createEntitys')}>Cadastrar nova Empresa</button>
+        <header className="headerContainer">
+            <nav className="navLinks">
+                <button onClick={() => navigate('/')} className="navButton">Empresas</button>
+                <button onClick={() => navigate('/createEntitys')} className="navButton">Cadastrar nova Empresa</button>
+            </nav>
         </header>
-    )
+    );
 }
