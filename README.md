@@ -71,4 +71,5 @@ https://www.react-hook-form.com/get-started/#SchemaValidation
 Para saber os Detalhes do Component `react-input-mask` acesse o link 
 https://www.npmjs.com/package/react-input-mask
 
+![alt text](image.png)
 
